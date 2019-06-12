@@ -2,7 +2,6 @@
   $('button#play-pause').on('click', function() {
     helper.playPauseAndUpdate();
      $(this).attr('playState', player.playState);
-     $('#time-control .total-time').text( totalTime );
   });
 
    $('button#next').on('click', function() {
@@ -13,7 +12,6 @@
      if (nextSongIndex >= album.songs.length) { return; }
      const nextSong = album.songs[nextSongIndex];
      helper.playPauseAndUpdate(nextSong);
-     $('#time-control .total-time').text( nextSong.duration );
    });
 
    $('button#previous').on('click', function() {
@@ -24,7 +22,6 @@
      if (nextSongIndex >= album.songs.length) { return; }
      const nextSong = album.songs[nextSongIndex];
      helper.playPauseAndUpdate(nextSong);
-     $('#time-control .total-time').text( nextSong.duration );
    });
    
     $('#time-control input').on('input', function (event) {
